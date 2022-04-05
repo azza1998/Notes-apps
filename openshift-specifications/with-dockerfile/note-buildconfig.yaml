@@ -11,7 +11,7 @@ spec:
     type: Git
     git:
       uri: "https://github.com/azza1998/Notes-apps.git"
-      ref: master
+      ref: main
     contextDir: app
   output:
     to:
