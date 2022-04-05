@@ -10,9 +10,9 @@ spec:
   source:
     type: Git
     git:
-      uri: "https://github.com/wkrzywiec/kanban-board.git"
+      uri: "https://github.com/azza1998/Notes-apps.git"
       ref: master
-    contextDir: notes-app
+    contextDir: app
   output:
     to:
       kind: ImageStreamTag
