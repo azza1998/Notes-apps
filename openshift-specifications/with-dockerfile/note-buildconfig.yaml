@@ -1,0 +1,20 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: notes-app
+  labels:
+    app: notes-app
+spec:
+  strategy:
+    type: Docker
+  source:
+    type: Git
+    git:
+      uri: "https://github.com/wkrzywiec/kanban-board.git"
+      ref: master
+    contextDir: notes-app
+  output:
+    to:
+      kind: ImageStreamTag
+      name: notes-app:latest
+
