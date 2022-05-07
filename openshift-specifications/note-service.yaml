@@ -12,3 +12,4 @@ spec:
   selector:
     app: notes-app
   type: ClusterIP
+  sh "mvn install -DskipTests=true"
