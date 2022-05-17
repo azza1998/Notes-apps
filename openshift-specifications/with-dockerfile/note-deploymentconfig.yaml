@@ -6,15 +6,7 @@ metadata:
     app: notes-app
 spec:
   triggers:
-  - type: ConfigChange 
-  - imageChangeParams:
-      automatic: true
-      containerNames:
-      - notes-app
-      from:
-        kind: ImageStreamTag
-        name: notes-app:latest
-    type: ImageChange
+  - type: ConfigChange
   replicas: 1
   selector:
     app: notes-app
@@ -23,6 +15,9 @@ spec:
       labels:
         app: notes-app
     spec:
+
       containers:
         - name: notes-app
-        
+          image: 172.30.48.47:5000/notes-app:latest
+      imagePullSecrets:
+        - name: nexus-docker
