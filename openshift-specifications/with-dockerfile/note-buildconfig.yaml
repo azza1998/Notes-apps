@@ -15,6 +15,7 @@ spec:
     contextDir: app
   output:
     to:
-      kind: ImageStreamTag
-      name: notes-app:latest
+      kind: DockerImage
+      name: "172.30.48.47:5000/notes-app:latest"
+
 
